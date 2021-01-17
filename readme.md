@@ -42,7 +42,7 @@ SpeedTest(urlList, (data) => {
    * Data response will be in this format
    * {
    *   url: string
-   *   pingL number //in milliseconds
+   *   ping: number //in milliseconds
    * }
    */
   console.log(data)

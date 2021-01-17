@@ -16,9 +16,11 @@ const calculateSpeed = (url) => {
 };
 
 export default (urlArr, callback) => {
-  const testQueue = urlArr.map((url) => calculateSpeed(url));
-
-  Promise.all(testQueue).then((data) => {
-    callback(data);
-  });
+  if (callback) {
+    Promise.all(urlArr.map(calculateSpeed)).then((data) => {
+      callback(data);
+    });
+  } else {
+    return Promise.all(urlArr.map(calculateSpeed));
+  }
 };

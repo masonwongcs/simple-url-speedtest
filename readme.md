@@ -37,14 +37,23 @@ const urlList = [
   "https://www.lg.com",
 ];
 
+/**
+ * Data arrays response will be in this format
+ * 
+ * {
+ *    url: string
+ *    ping: number // In milliseconds
+ * }
+ * 
+*/
+
+// Data can be access using function callback method
 SpeedTest(urlList, (data) => {
-  /**
-   * Data response will be in this format
-   * {
-   *   url: string
-   *   ping: number //in milliseconds
-   * }
-   */
+  console.log(data)
+});
+
+// or using Promise callback method
+SpeedTest(urlList).then(data => {
   console.log(data)
 });
 

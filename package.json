@@ -1,0 +1,35 @@
+{
+  "name": "simple-url-speedtest",
+  "version": "0.1.1",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "keywords": [
+    "simple",
+    "url",
+    "urls",
+    "speedtest",
+    "ping",
+    "speed"
+  ],
+  "author": "masonwongcs",
+  "contributors": [
+    {
+      "name": "Mason Wong",
+      "email": "masonwongcs@gmail.com",
+      "url": "https://masonwongcs.github.io"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masonwongcs/simple-url-speedtest"
+  }
+}

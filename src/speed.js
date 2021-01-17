@@ -1,26 +1,24 @@
-export default (urlArr, callback) => {
-  let list = [];
-
-  urlArr.forEach((item, index) => {
+const calculateSpeed = (url) => {
+  return new Promise((resolve) => {
     const image = new Image();
     let startTime, endTime;
     startTime = Date.now();
-    image.src = item + "/" + Math.random();
+    image.src = url + "/" + Math.random();
     image.onerror = function () {
       endTime = Date.now();
       const ping = endTime - startTime;
-      list[index] = {
-        url: item,
+      resolve({
+        url: url,
         ping,
-      };
+      });
     };
   });
+};
 
-  const callbackInterval = setInterval(() => {
-    const notEmptyList = list.filter((item) => item);
-    if (notEmptyList.length === urlArr.length) {
-      clearInterval(callbackInterval);
-      callback(list);
-    }
-  }, 0);
+export default (urlArr, callback) => {
+  const testQueue = urlArr.map((url) => calculateSpeed(url));
+
+  Promise.all(testQueue).then((data) => {
+    callback(data);
+  });
 };

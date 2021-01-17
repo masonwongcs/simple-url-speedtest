@@ -7,11 +7,11 @@ A very simple url testing based on ping response
 - [Installation](#installation)
 - [Usage](#usage)
 
-[comment]: <> (## Demo)
+## Demo
 
-[comment]: <> (![]&#40;demo.gif&#41;)
+![](demo.gif)
 
-[comment]: <> (Link to demo: https://react-simple-marquee.surge.sh)
+Link to demo: https://simple-url-speedtest.surge.sh
 
 ## Installation
 

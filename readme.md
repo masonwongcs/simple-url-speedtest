@@ -9,7 +9,7 @@ A very simple url testing based on ping response
 
 ## Demo
 
-![](demo.gif)
+![](https://media.giphy.com/media/KIRRjswUNPxAlHcg9a/giphy.gif)
 
 Link to demo: https://simple-url-speedtest.surge.sh
 
